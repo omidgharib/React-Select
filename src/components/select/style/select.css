@@ -1,0 +1,129 @@
+.select-container {
+    z-index: 1000;
+}
+
+.select-container .select-input-content {
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: hsl(0,0%,100%);
+    border-color: hsl(0,0%,80%);
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    cursor: default;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    min-height: 38px;
+    outline: 0 !important;
+    position: relative;
+    -webkit-transition: all 100ms;
+    transition: all 100ms;
+    box-sizing: border-box;
+}
+
+.select-container.is-open .select-input-content {
+    border-color: #2684ff;
+    box-shadow: 0 0 0 1px #2684ff;
+}
+
+.select-container .select-input {
+    box-sizing: content-box;
+    width: 0px;
+    background: 0px center;
+    border: 0px; 
+    font-size: inherit;
+    opacity: 1;
+    outline: 0px;
+    padding: 0px;
+    color: inherit;
+}
+
+.select-container.is-open .select-input {
+    width: 100%;
+}
+
+.select-container .select-input-content .select-input-arrow {
+    color: hsl(0,0%,80%);
+    left: 16px;
+    top: 7px;
+}
+
+.select-container .select-input-content:hover .select-input-arrow {
+    color: hsl(0,0%,60%);
+}
+
+.select-container.is-open .select-input-content .select-input-arrow {
+    color: hsl(0,0%,20%);
+}
+
+.select-container .select-list,
+.select-container-overlay .select-list {
+    width: 100%;
+    height: 100px;
+    overflow: overlay;
+    top: 42px;
+    background-color: #fff;
+}
+
+
+.select-container .select-list .select-item {
+    cursor: pointer;
+    height: 37px;
+    line-height: 37px;
+}
+
+.select-container .select-list .select-item:hover {
+    background-color: #deebff;
+}
+
+.select-container .select-list .select-item.selected {
+    background-color: #2684ff;
+    color: #fff;
+}
+
+/* mobile mode */
+
+.select-container-overlay {
+    position: fixed;
+    z-index: 1020;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    background-color: rgb(255, 255, 255);
+    /* transition: all 1s; */
+}
+
+.mobile-mode .select-container .select-input-content {
+    border: unset;
+    outline: unset;
+    box-shadow: unset;
+    min-height: 56px;
+    line-height: 56px;
+}
+
+.select-container-overlay.mobile-mode .select-list .select-item {
+    border-bottom: 1px solid #ddd;
+}
+
+.select-container-overlay.mobile-mode .select-list {
+    height: 100%;
+    top: unset;
+}
+
+.select-container-overlay.mobile-mode .select-input-content .select-input-close {
+    color: hsl(0,0%,80%);
+    left: 16px;
+    top: 0px;
+}
