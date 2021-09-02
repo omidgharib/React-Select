@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@terrestris/react-geo": "^10.5.0",
-    "axios": "^0.18.1",
+    "axios": "^0.21.1",
     "axios-retry": "^3.1.2",
     "bootstrap": "^4.3.1",
     "classnames": "^2.2.6",
